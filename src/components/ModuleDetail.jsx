@@ -286,7 +286,7 @@ function Module3() {
           <p>AI tools are now used across the hiring pipeline: screening resumes, scoring video interviews, ranking candidates. They promise to remove human bias. In practice, they often replicate it.</p>
           <p>A 2024 University of Washington study tested AI resume screening behavior by submitting identical resumes with names that varied by perceived race and gender. The results: <strong>AI tools favored white-associated names 85% of the time. Black male-associated names were never preferred over white counterparts.</strong> <span style={{ fontFamily: "'DM Mono',monospace", fontSize: '0.72rem', color: 'var(--muted)' }}>[UW, October 2024]</span></p>
           <p>The problem does not stop when a human reviews the AI's output. A 2025 UW study found that when humans screened resumes alongside racially biased AI models, they absorbed the AI's bias and could not adequately identify or counteract it — even when warned. <span style={{ fontFamily: "'DM Mono',monospace", fontSize: '0.72rem', color: 'var(--muted)' }}>[UW, November 2025]</span></p>
-          <p>Colorado's SB 24-205 (effective February 2026) imposes a duty of reasonable care on developers and deployers of high-risk AI systems in employment decisions. The EEOC has issued guidance that existing anti-discrimination law applies to AI hiring tools and that employers cannot outsource liability to vendors.</p>
+          <p>Colorado's SB 24-205 imposes a duty of reasonable care on developers and deployers of high-risk AI systems in employment decisions. Originally set to take effect February 1, 2026, the enforcement date was delayed to June 30, 2026 by a special-session amendment, and as of May 2026 enforcement is stayed by a federal court order pending rulemaking — but the law remains on the books. The EEOC has issued guidance that existing anti-discrimination law applies to AI hiring tools and that employers cannot outsource liability to vendors.</p>
         </div>
       </ContentBlock>
 
@@ -460,7 +460,7 @@ function Module5() {
 
       <CaseStudy title="State-by-State Facial Recognition Guardrails Emerge After Pattern of Wrongful Arrests (2025)" source="Stateline (February 4, 2025) · ACLU Williams v. City of Detroit">
         <p>By early 2025, at least eight people in the United States had been wrongfully arrested based on incorrect AI facial recognition matches — and in nearly every documented case, the person wrongfully arrested was Black. A February 2025 Stateline investigation found that most jurisdictions using facial recognition had no rules in place at all.</p>
-        <p>As of early 2025: 15 states had some legislation around facial recognition. Montana and Utah require a warrant. Virginia requires facial recognition results be treated as investigative leads that cannot alone support an arrest warrant. New Jersey requires defendants be notified when facial recognition was used. Seven more states were actively considering legislation. Most states have nothing.</p>
+        <p>As of early 2025, 15 states had some legislation around facial recognition — a count that has continued to grow. Montana and Utah require a warrant. Virginia requires facial recognition results be treated as investigative leads that cannot alone support an arrest warrant. New Jersey requires defendants be notified when facial recognition was used. As of May 2026, the number of states with any facial recognition or biometric privacy restrictions is likely in the range of 17–20 or higher, depending on how broadly the category is defined.</p>
       </CaseStudy>
 
       <ContentBlock title="Hands-On Activity: Feedback Loop Mapping — 35 min">
@@ -550,7 +550,7 @@ function Module6() {
       <ContentBlock title="Background Reading">
         <div className="reading-body">
           <p>Social media recommendation algorithms maximize engagement. They do this by learning what each user responds to and surfacing more of it. The content that generates the most engagement is not always the most accurate, the most representative, or the least harmful.</p>
-          <p>A 2024 UNESCO study found that major large language models associate women with "family" and "home" four times more often than men, while linking male-associated names to "business," "career," and "executive" roles. When these associations are embedded in content recommendation systems, they shape what opportunities and information different users see.</p>
+          <p>A 2024 UNESCO study found that Llama 2 described women in domestic work roles four times more often than men, while linking male-associated names to "business," "career," and "executive" roles. The finding is specific to Llama 2's treatment of occupational descriptions — but the pattern reflects broader tendencies documented across other models. When these associations are embedded in content recommendation systems, they shape what opportunities and information different users see. <span style={{ fontFamily: "'DM Mono',monospace", fontSize: '0.72rem', color: 'var(--muted)' }}>[UNESCO, 2024]</span></p>
           <p>Content moderation AI has a documented language gap. Systems trained predominantly on English perform significantly worse on Arabic, Amharic, Burmese, and other languages. This means harassment in those languages is more likely to remain on platforms, while legitimate content is more likely to be incorrectly removed.</p>
         </div>
       </ContentBlock>
@@ -649,14 +649,14 @@ function Module7() {
 
       <ContentBlock title="Background Reading">
         <div className="reading-body">
-          <p><strong>United States:</strong> The U.S. does not yet have comprehensive federal AI regulation. Colorado's SB 24-205 (effective February 2026) imposes a duty of reasonable care on developers and deployers of high-risk AI systems in employment, education, financial services, and healthcare. The EEOC has issued guidance that existing employment discrimination law applies to AI hiring tools.</p>
-          <p><strong>European Union:</strong> The EU AI Act (entered into force 2024) classifies AI systems used in hiring, credit scoring, and critical infrastructure as high-risk, requiring mandatory risk assessments, transparency obligations, and human oversight. It is the most comprehensive AI regulation currently in force.</p>
+          <p><strong>United States:</strong> The U.S. does not yet have comprehensive federal AI regulation. Colorado's SB 24-205 imposes a duty of reasonable care on developers and deployers of high-risk AI systems in employment, education, financial services, and healthcare. Its enforcement date was delayed from February 1, 2026 to June 30, 2026 by legislative amendment, and as of May 2026 a federal court has stayed enforcement pending rulemaking — the law remains on the books but is in legal flux. The EEOC has issued guidance that existing employment discrimination law applies to AI hiring tools.</p>
+          <p><strong>European Union:</strong> The EU AI Act (entered into force August 2024) classifies AI systems used in hiring, credit scoring, and critical infrastructure as high-risk, requiring mandatory risk assessments, transparency obligations, and human oversight. It is the most comprehensive AI regulation currently in force, though the high-risk AI provisions are phased in through August 2026 and beyond.</p>
           <p><strong>Gaps:</strong> Most regulation focuses on process — did the company test for bias, did it document its model. It does not guarantee equitable outcomes. An algorithm can pass a bias audit and still produce disparate impact. Enforcement is also slow relative to the pace of AI deployment.</p>
         </div>
       </ContentBlock>
 
       <CaseStudy title="The U.S. Commission on Civil Rights and AI in K-12" source="U.S. Commission on Civil Rights. (2024). Rising use of artificial intelligence in K–12 education. https://www.usccr.gov/reports/2024/rising-use-artificial-intelligence-k-12-education">
-        <p>In 2024, the U.S. Commission on Civil Rights issued a report examining how AI in K–12 education can reduce or worsen existing disparities. It called for federal guidance, mandatory impact assessments before AI tools are deployed in schools, and greater transparency from vendors. As of early 2026, no federal legislation has acted on those recommendations.</p>
+        <p>In 2024, the U.S. Commission on Civil Rights issued a report examining how AI in K–12 education can reduce or worsen existing disparities. It called for federal guidance, mandatory impact assessments before AI tools are deployed in schools, and greater transparency from vendors. As of May 2026, no federal legislation has acted on those recommendations.</p>
       </CaseStudy>
 
       <ContentBlock title="Hands-On Activity: Draft a Policy — 35 min">
@@ -726,7 +726,7 @@ function Module8() {
             <strong>Note:</strong> This approach is the focus of <em>GUARD: Guiding Unbiased Alignment through Reward Debiasing</em> (Bhattacharya et al., 2024), accepted to EMNLP and presented at NeurIPS workshops.
           </div>
           <p><strong>4. Post-Hoc Auditing:</strong> Tests a deployed model for differential performance across demographic groups without modifying the model. Useful for detecting bias that was not caught during development — but reactive rather than preventive.</p>
-          <p><strong>The Limits of Technical Solutions:</strong> A 2025 IBM survey found that 42% of AI adopters admitted prioritizing performance and speed over fairness, knowingly deploying biased systems. Technical tools for fairness exist. Whether they are used is an organizational, economic, and political question — not just a technical one.</p>
+          <p><strong>The Limits of Technical Solutions:</strong> According to IBM's Global AI Adoption Index (2023), only 27% of organizations actively deploying AI are taking steps to reduce algorithmic bias — meaning nearly three in four are not. Technical tools for fairness exist. Whether they are used is an organizational, economic, and political question — not just a technical one. <span style={{ fontFamily: "'DM Mono',monospace", fontSize: '0.72rem', color: 'var(--muted)' }}>[IBM, 2024]</span></p>
         </div>
       </ContentBlock>
 

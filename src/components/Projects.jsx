@@ -23,7 +23,7 @@ export default function Projects() {
             <div className="project-card">
               <div className="project-num">03</div>
               <h3 className="project-title">The Policy Tracker</h3>
-              <p className="project-desc">A collaboratively maintained tracker of current AI bias legislation — Colorado SB 24-205, the EU AI Act, EEOC guidance, FDA pulse oximeter standards. Students add entries in Modules 7 and 8. A real-world reference for college apps and advocacy work.</p>
+              <p className="project-desc">A collaboratively maintained tracker of current AI bias legislation — Colorado SB 24-205 (passed 2024, enforcement in legal flux as of May 2026), the EU AI Act (phased implementation through 2026–27), EEOC guidance, FDA pulse oximeter standards. Students add entries in Modules 7 and 8. A real-world reference for college apps and advocacy work.</p>
               <div className="project-tag">Google Sheets · Updated Modules 7–8</div>
             </div>
           </div>
