@@ -4,9 +4,9 @@ export default function Bibliography() {
   return (
     <div id="bibliography" className="bib-section">
       <div className="bib-inner">
-        <div className="section-header" style={{ borderColor: '#444', marginBottom: '3rem' }}>
-          <span className="section-label" style={{ color: '#888' }}>Verified as of March 2026</span>
+        <div className="section-header">
           <h2 className="section-title" style={{ color: 'var(--paper)' }}>Full Bibliography</h2>
+          <span className="section-label">Verified as of July 2026</span>
         </div>
         {bibGroups.map((group) => (
           <div key={group.title} className="bib-group">

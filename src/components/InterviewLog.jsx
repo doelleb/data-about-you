@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { confettiBurst } from '../confetti'
 
 export default function InterviewLog({ num, target, questions }) {
   const [fields, setFields] = useState({ name: '', org: '', date: '', surprise: '', takeaways: '', connection: '' })
@@ -11,14 +12,15 @@ export default function InterviewLog({ num, target, questions }) {
     } catch (e) {}
   }, [num])
 
-  const handleSave = () => {
+  const handleSave = (e) => {
     if (!fields.name && !fields.takeaways) {
       alert('Please fill in at least the interviewee name and key takeaways before saving.')
       return
     }
     try {
       localStorage.setItem(`databout-log-${num}`, JSON.stringify({ ...fields, saved: new Date().toLocaleDateString() }))
-    } catch (e) {}
+    } catch (err) {}
+    confettiBurst(e.clientX, e.clientY)
     setSaved(true)
     setTimeout(() => setSaved(false), 2500)
   }
@@ -34,7 +36,7 @@ export default function InterviewLog({ num, target, questions }) {
       <div className="interview-target">
         <strong>Suggested target:</strong> {target}
       </div>
-      {questions && (
+      {questions && questions.length > 0 && (
         <ul className="question-list">
           {questions.map((q, i) => (
             <li key={i}><span className="q-num">Q{i + 1}</span><span>{q}</span></li>
@@ -57,11 +59,7 @@ export default function InterviewLog({ num, target, questions }) {
             <div className="log-field full-width"><label>Key takeaways</label><textarea rows="3" value={fields.takeaways} onChange={set('takeaways')} /></div>
           )}
         </div>
-        <button
-          className="save-log-btn"
-          onClick={handleSave}
-          style={saved ? { background: 'var(--accent3)', borderColor: 'var(--accent3)', color: 'white' } : {}}
-        >
+        <button className={`save-log-btn${saved ? ' saved' : ''}`} onClick={handleSave}>
           {saved ? '✓ Saved' : 'Save Log Entry'}
         </button>
       </div>

@@ -1,12 +1,23 @@
-export default function Nav() {
+export default function Nav({ teacherMode, onToggleTeacher }) {
   return (
     <nav>
       <a className="nav-logo" href="#">Databout <span>You</span></a>
-      <ul className="nav-links">
-        <li><a href="#modules">Modules</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#bibliography">Bibliography</a></li>
-      </ul>
+      <div className="nav-right">
+        <ul className="nav-links">
+          <li><a href="#modules">modules</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#bibliography">bibliography</a></li>
+        </ul>
+        <button
+          className={`teacher-toggle${teacherMode ? ' on' : ''}`}
+          onClick={onToggleTeacher}
+          aria-pressed={teacherMode}
+          title="Show facilitator guides, pacing notes, and answer guidance"
+        >
+          <span className="knob" aria-hidden="true" />
+          Teacher Mode
+        </button>
+      </div>
     </nav>
   )
 }

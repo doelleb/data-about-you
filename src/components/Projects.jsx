@@ -1,31 +1,39 @@
+const PROJECTS = [
+  {
+    num: '01', color: 'var(--m1)', title: 'The AI Careers Database',
+    desc: 'A living, collaboratively maintained spreadsheet mapping careers at the intersection of AI and fairness. Students add entries throughout the curriculum — from algorithmic auditor to clinical AI researcher. By Module 8, the database should have 20+ distinct roles across sectors.',
+    tag: 'Google Sheets · Ongoing',
+  },
+  {
+    num: '02', color: 'var(--m6)', title: 'The Community Bias Audit',
+    desc: 'A running document where students log real examples of AI bias encountered in news and research. Each entry includes the domain, harm, bias type, and source link. End-of-course deliverable: a one-page analysis of one selected entry.',
+    tag: 'Google Docs · 1 entry/week',
+  },
+  {
+    num: '03', color: 'var(--m7)', title: 'The Policy Tracker',
+    desc: "A collaboratively maintained tracker of AI bias regulation in motion — Colorado's repeal-and-replace of its AI Act (SB 26-189, effective January 2027), the EU AI Act's rescheduled high-risk deadlines (December 2027), EEOC guidance, FDA pulse oximeter standards. Students add entries in Modules 7 and 8.",
+    tag: 'Google Sheets · Updated Modules 7–8',
+  },
+]
+
 export default function Projects() {
   return (
     <div id="projects">
       <div className="projects-bg">
         <div className="section">
-          <div className="section-header" style={{ borderColor: '#444' }}>
-            <span className="section-label" style={{ color: '#888' }}>Cross-Curriculum</span>
-            <h2 className="section-title" style={{ color: 'var(--paper)' }}>Three Running Projects</h2>
+          <div className="section-header">
+            <h2 className="section-title">Three Running Projects</h2>
+            <span className="section-label">Cross-Curriculum</span>
           </div>
           <div className="projects-grid">
-            <div className="project-card">
-              <div className="project-num">01</div>
-              <h3 className="project-title">The AI Careers Database</h3>
-              <p className="project-desc">A living, collaboratively maintained spreadsheet mapping careers at the intersection of AI and fairness. Students add entries throughout the curriculum — from algorithmic auditor to clinical AI researcher. By Module 8, the database should have 20+ distinct roles across sectors.</p>
-              <div className="project-tag">Google Sheets · Ongoing</div>
-            </div>
-            <div className="project-card">
-              <div className="project-num">02</div>
-              <h3 className="project-title">The Community Bias Audit</h3>
-              <p className="project-desc">A running document where students log real examples of AI bias encountered in news and research. Each entry includes the domain, harm, bias type, and source link. End-of-course deliverable: a one-page analysis of one selected entry.</p>
-              <div className="project-tag">Google Docs · 1 entry/week</div>
-            </div>
-            <div className="project-card">
-              <div className="project-num">03</div>
-              <h3 className="project-title">The Policy Tracker</h3>
-              <p className="project-desc">A collaboratively maintained tracker of current AI bias legislation — Colorado SB 24-205 (passed 2024, enforcement in legal flux as of May 2026), the EU AI Act (phased implementation through 2026–27), EEOC guidance, FDA pulse oximeter standards. Students add entries in Modules 7 and 8.</p>
-              <div className="project-tag">Google Sheets · Updated Modules 7–8</div>
-            </div>
+            {PROJECTS.map(p => (
+              <div key={p.num} className="project-card" style={{ '--pc': p.color }}>
+                <div className="project-num">{p.num}</div>
+                <h3 className="project-title">{p.title}</h3>
+                <p className="project-desc">{p.desc}</p>
+                <div className="project-tag">{p.tag}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
