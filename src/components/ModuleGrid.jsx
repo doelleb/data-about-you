@@ -34,7 +34,7 @@ export default function ModuleGrid({ onOpenModule }) {
                 </div>
               </div>
               <div className="module-card-footer">
-                <span>90 min</span>
+                <span>90 min{mod.lab && <span className="lab-flag"> · ⚗ Lab: {mod.lab}</span>}</span>
                 <span className="module-open-btn">Open Module →</span>
               </div>
             </div>

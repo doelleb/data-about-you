@@ -4,9 +4,11 @@ export default function Nav({ teacherMode, onToggleTeacher }) {
       <a className="nav-logo" href="#">Databout <span>You</span></a>
       <div className="nav-right">
         <ul className="nav-links">
+          <li><a href="#labs">labs</a></li>
           <li><a href="#modules">modules</a></li>
           <li><a href="#projects">projects</a></li>
-          <li><a href="#bibliography">bibliography</a></li>
+          <li><a href="#bibliography">sources</a></li>
+          <li><a href="#colophon">about</a></li>
         </ul>
         <button
           className={`teacher-toggle${teacherMode ? ' on' : ''}`}
